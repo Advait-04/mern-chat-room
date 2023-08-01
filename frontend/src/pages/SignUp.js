@@ -45,8 +45,10 @@ const SignUp = () => {
             <Button
                 disabled={error}
                 variant="primary"
-                type="sumbit"
-                className="mt-4 w-100 fs-5"
+                type="submit"
+                className={`mt-4 w-100 fs-5 d-flex align-items-center justify-content-center p-2 ${
+                    isLoading ? "for-loading" : ""
+                }`}
             >
                 {isLoading ? (
                     <Spinner
