@@ -11,7 +11,7 @@ const mongoose = require("mongoose");
 
 app.use(
     cors({
-        origin: "https://mern-chat-room.vercel.app/"
+        origin: "https://mern-chat-room.vercel.app"
     })
 );
 
