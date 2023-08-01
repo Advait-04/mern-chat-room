@@ -13,7 +13,6 @@ app.use(
     cors({
         origin: ["https://mern-chat-room.vercel.app/"],
         methods: ["GET", "POST"],
-        credentials: true,
     })
 );
 
