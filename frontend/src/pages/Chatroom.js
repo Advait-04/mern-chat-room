@@ -13,7 +13,7 @@ const Chatroom = () => {
     const bottomRef = useRef(null);
 
     const refreshChat = async (room) => {
-        const response = await fetch(`/api/chats/retrievechat/${room}`);
+        const response = await fetch(`https://mern-chat-room-backend.vercel.app/api/chats/retrievechat/${room}`);
 
         const json = await response.json();
 
@@ -40,7 +40,7 @@ const Chatroom = () => {
         try {
             console.log(`room: ${room}, user: ${user}, text: ${text}`);
 
-            const response = await fetch("/api/chats/sendchat", {
+            const response = await fetch("https://mern-chat-room-backend.vercel.app/api/chats/sendchat", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ room, user: user.email, text }),
