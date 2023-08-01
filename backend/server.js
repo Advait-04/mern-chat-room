@@ -11,7 +11,7 @@ const mongoose = require("mongoose");
 
 app.use(
     cors({
-        origin: ["http://localhost:3000"],
+        origin: ["https://mern-chat-room.vercel.app/"],
         methods: ["GET", "POST"],
         credentials: true,
     })
