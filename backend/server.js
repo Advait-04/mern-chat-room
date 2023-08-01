@@ -10,7 +10,9 @@ const chatRoutes = require("./routes/chatroom");
 const mongoose = require("mongoose");
 
 app.use(
-    cors()
+    cors({
+        origin: "https://mern-chat-room.vercel.app/"
+    })
 );
 
 // logger
