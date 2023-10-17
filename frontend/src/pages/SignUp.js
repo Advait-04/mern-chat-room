@@ -9,6 +9,9 @@ const SignUp = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const { signup, error, isLoading } = useSignup();
+
+    const formRef = useRef();
+    
     const navigate = useNavigate();
 
     const handleSumbit = async (e) => {
@@ -20,6 +23,15 @@ const SignUp = () => {
             navigate("/");
         }
     };
+
+    useEffect(() => {
+        if (error !== null) {
+            setInterval(() => {
+                setError(null);
+            }, 2000);
+        }
+    }, [error]);
+    
     return (
         <Form className="signup p-5 fs-5" onSubmit={handleSumbit}>
             <h3 className="text-center mb-4 fs-3 mt-4">-- Sign Up --</h3>
